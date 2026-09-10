@@ -59,13 +59,13 @@
 
 // Problem statement: Find the vowels and constants alphabets in english. 
 
-let inp = prompt('Enter alphabet: ');
+// let inp = prompt('Enter alphabet: ');
 
-if(inp=='A'||inp=='a'||inp=='e'||inp=='E'||inp=='i'||inp=='I'||inp=='o'||inp=='O'||inp=='u'||inp=='U'){
-    alert('This alphabet is vowel');
-}else{
-    alert("This alphabet is constant");
-}
+// if(inp=='A'||inp=='a'||inp=='e'||inp=='E'||inp=='i'||inp=='I'||inp=='o'||inp=='O'||inp=='u'||inp=='U'){
+//     alert('This alphabet is vowel');
+// }else{
+//     alert("This alphabet is constant");
+// }
 
 
 
@@ -113,4 +113,25 @@ if(inp=='A'||inp=='a'||inp=='e'||inp=='E'||inp=='i'||inp=='I'||inp=='o'||inp=='O
 // }else{
 //     alert(`${year} is not a leap year`);
 // }
+
+
+
+// Write down a program which will take salary of employee from user. if 
+// salary is below 50,000 there will be no tax on it but if above 50,000 apply 
+// 7% income tax on it and if salary is above 100,000 apply 12% Tax on it 
+
+let salary = parseInt(prompt("Enter employee salary: "));
+let tax = 0;
+let finalSalary = 0;
+if(salary>50000){
+    tax = salary * 7/100;
+}else if(salary>100000){
+    tax = salary * 12/100;
+}else{
+    tax = 0;
+}
+finalSalary = salary - tax;
+alert(`Final Salary after deducting tax: ${finalSalary}`);
+
+
 
