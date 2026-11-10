@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .danger {
+      color: red;
+      display: block;
+    }
+    .success {
+      color: green;
+      display: block;
+    }
+</style>
+<body>
+    <h1>Here</h1>
+    <h1>HTML Form</h1>
+    <form action="">
+            <input type="text" id="fname" name="fname">
+    </form>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        // document.addEventListener("keydown", function(event) {
+        //     if(event.key=="1"){
+        //         document.body.style.backgroundColor = "red";
+        //     }
+        //     else if(event.key=="2"){
+        //          document.body.style.backgroundColor = "blue";
+        //     }
+        // });
+
+        let fname = document.getElementById("fname");
+        let span = document.createElement('span');
+        fname.addEventListener("input",function(event){
+            // let regex = /^[a-zA-Z]+$/;
+ 
+           this.value = this.value.replace(/[^a-zA-Z]/g, "");
+
+            // if (regex.test(fname.value)) {
+            //     span.textContent = ""
+            //     span.className = "success";
+            // } else {
+            //     span.textContent = "invalid value"
+            //     span.className = "danger";
+            // }
+            
+            // fname.after(span);
+            
+        })
+
+    })
+</script>
+</html>
